@@ -1,11 +1,9 @@
 # getting-cleaningdata_final_project
 Read Me for Getting& Cleaning Data Final Project
 
-Thanks for grading my assignment!
+To view a properly formatted version of my data table “getting_cleaningdata_project.txt” you can either run the run_analysis.R script or open it in R using the following code:
 
-To view a properly formatted version of my data table “getting&cleaningdata_project.txt” you can either run the run_analysis.R script or open it in R using the following code:
-
-UCI_HAR_Tidy_Data <- read.table("./getting&cleaningdata_project.txt", header = TRUE)
+UCI_HAR_Tidy_Data <- read.table("./getting_cleaningdata_project.txt", header = TRUE)
 View(UCI_HAR_Tidy_Data)
 
 
@@ -95,15 +93,12 @@ J. To fully tidy the summarytable I needed to convert the “feature” column i
 
 K. The resulting table meets all of Hadley Wickham’s criteria for tidy data. 
 
-L. The script uses write.table() to export the summarytable dataframe as a text file called “getting&cleaningdata_project.txt”
+L. The script uses write.table() to export the summarytable dataframe as a text file called “getting_cleaningdata_project.txt”
 
 If you run the run_analysis.R script the table will open at the end of the script. 
 
 Alternatively you can download the text file and use the following code to read a properly formatted version of the file in R (depending on where you save the .txt file you may need to modify the file path).
 
-UCI_HAR_Tidy_Data <- read.table("./getting&cleaningdata_project.txt", header = TRUE)
+UCI_HAR_Tidy_Data <- read.table("./getting_cleaningdata_project.txt", header = TRUE)
 View(UCI_HAR_Tidy_Data)
 
-
-
-Thanks again!
