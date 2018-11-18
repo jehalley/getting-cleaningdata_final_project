@@ -1,1 +1,106 @@
-UCI HAR Dataset CodebookSubject	Test subject that all observations in row were made on.  	      Variable Names:       1-30 corresponding to subject number. 	Dataset	Indicates whether the subject was a part of the training or test data set.	      Variable Names:		train		testActivity	Data was taken on six different activities.	      Variable Names:		walking		walking_upstairs		walking_downstairs		sitting		standing		laying		Domain:	Specifies the domain of the measurement. 	      Variable Names:		frequency		time:acceleration_signal_type:Specifies whether the measurement was recorded from the body or adjusted based on gravity. 	Variable Names:		body		bodybody		gravityInstrument:	Specifies which instrument was used to make the observation.		Variable Names:		Accelerometer		Gyroscopeunit_of_measurement	Specified what unit of measurement for the observation.	Variable Names:		g		radians/secondMeasurement_type	Specifies the type of measurement made by the instrument.		Variable Names:		jerk		jerk_magnitude		magnitudeStatistic_type	Specifies what statistic was calculated determined from the observation data.		Variable Names:		mean		standard_deviationmean_observationThe mean observation of each specified type for each subject performing the specified activity.
+UCI HAR Dataset Codebook
+
+Updated version of original codebook from original UCI Dataset. Readme included with original data set quoted below. Updated codebook follows:
+
+==================================================================
+Human Activity Recognition Using Smartphones Dataset
+Version 1.0
+==================================================================
+Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
+Smartlab - Non Linear Complex Systems Laboratory
+DITEN - Universit‡ degli Studi di Genova.
+Via Opera Pia 11A, I-16145, Genoa, Italy.
+activityrecognition@smartlab.ws
+www.smartlab.ws
+==================================================================
+
+The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
+
+The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. See 'features_info.txt' for more details. 
+
+For each record it is provided:
+======================================
+
+subject
+	Test subject that all observations in row were made on.  
+    
+    Data Type: integer
+      1-30  
+	
+dataset
+	Indicates whether the subject was a part of the training or test data set.
+	  
+	  Data Type: Factor with 2 levels:
+		    train
+		    test
+
+activity
+	Specifies on which of six activities data was taken.. 
+   
+   Data Type: Factor with 6 levels:	
+		    walking
+		    walking_upstairs
+		    walking_downstairs
+		    sitting
+		    standing
+		    laying
+		
+domain:
+	Specifies the domain of the measurement. 
+	  
+	  Data Type: Factor with 6 levels: 
+		  frequency
+		  time
+
+acceleration_signal_type:
+  Specifies whether the measurement was recorded from the body or adjusted 
+  based on gravity. 
+    
+    Data Type: Factor with 3 levels:
+		  body
+		  bodybody
+		  gravity
+
+ionstrument:
+	Specifies which instrument was used to make the observation.
+	
+	  Data Type: Factor with 2 levels:
+		  Accelerometer
+		  Gyroscope
+
+unit_of_measurement
+	Specified what unit of measurement for the observation.
+
+  	Data Type: Factor with 2 levels:
+		  g
+		  radians/second
+
+
+measurement_type
+	Specifies the type of measurement made by the instrument.
+	
+	  Data Type: Factor with 3 levels:
+		  jerk
+		  jerk_magnitude
+		  magnitude
+
+
+statistic_type
+	Specifies what statistic was calculated determined from the observation data.
+	
+	  Data Type: Factor with 2 levels:
+		  mean
+		  standard_deviation
+axis
+  Specifies which axis a single axis meausrement was made on. If this is a composite value    for all axises then no value is available.
+    
+    Data Type: Factor with 3 levels:
+      X
+      Y
+      Z
+
+mean_observation
+  The mean observation of each specified type for each subject performing the 
+  specified activity.
+
+  Data Type: number
