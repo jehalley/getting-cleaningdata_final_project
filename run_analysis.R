@@ -1,14 +1,17 @@
 #Load the necessary packages for the script#
-  #library(plyr)
   library(tidyr)
   library(dplyr)
   library(readr)
   library(data.table)
 
 #download the Data Set and Unzip it #
-  download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip","UCIzipfile.zip")
+  filename<-"UCIzipfile.zip"
+  fileurl<-"https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+  if(!file.exists(filename)){
+     download.file(fileurl, filename)
+  }
   unzip(zipfile = "UCIzipfile.zip")
-
+  
 #change the working directory to the unzipped file#
   setwd("UCI HAR Dataset")
 
@@ -94,10 +97,10 @@
 setwd("..")
  
 #save the table as a text file using write.table()
- write.table(summarytable,row.names = FALSE, file = "getting&cleaningdata_project.txt")
+ write.table(summarytable,row.names = FALSE, file = "getting_cleaningdata_project.txt")
 
 #to View this file please use the following code, you may need to adjust the file path accordingly
- UCI_HAR_Tidy_Data <- read.table("./getting&cleaningdata_project.txt", header = TRUE)
+ UCI_HAR_Tidy_Data <- read.table("./getting_cleaningdata_project.txt", header = TRUE)
  View(UCI_HAR_Tidy_Data)
  
  
